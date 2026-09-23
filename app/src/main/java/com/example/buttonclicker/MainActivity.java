@@ -1,7 +1,9 @@
 package com.example.buttonclicker;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    int counter = 0;
+    @SuppressLint("SetTextI18n")
     public void button(View view) {
+        counter ++;
+        TextView txt = findViewById(R.id.text2);
+        txt.setText("You Clicked the button " + counter + "times!");
     }
 }
